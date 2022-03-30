@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, children }) => {
 
     const quantityReducer = (previous, current) => previous + (current.quantity === 0 ? 1 : current.quantity);
     const priceReducer = (previous, current) => previous + (current.price * (current.quantity === 0 ? 1 : current.quantity));
@@ -24,12 +24,7 @@ const Cart = ({ cart }) => {
                 <h3>Grand Total: $ {grandTotal.toFixed(2)}</h3>
             </div>
             <div className='cart-btn-container'>
-                <button>
-                    <p>Clear Cart</p>
-                </button>
-                <button>
-                    <p>Review Order</p>
-                </button>
+                {children}
             </div>
         </div>
     );
