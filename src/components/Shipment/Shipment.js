@@ -32,11 +32,11 @@ const Shipment = () => {
 
     return (
         <div className='form-container'>
-            <h2 className='form-title'>Shipping Information</h2>
+            <h2 className='form-title'>Your Shipping Information</h2>
             <form onSubmit={handleCreateUser}>
                 <div className='input-group'>
                     <label htmlFor="email">Email</label>
-                    <input type="email" name='email' value={user.email} required disabled />
+                    <input type="email" name='email' value={user?.email} required disabled />
                 </div>
 
                 <div className='input-group'>
