@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import './Orders.css';
 
 const Orders = () => {
-    const [products, setProducts] = useProducts();
+    const [products] = useProducts();
     const [cart, setCart] = useCart(products);
 
     const handleRemoveProduct = product => {
@@ -31,8 +31,8 @@ const Orders = () => {
                 </div>
                 <div className='cart-container'>
                     <Cart cart={cart}>
-                        <Link to='/inventory'>
-                            <button>Proceed Checkout</button>
+                        <Link to='/shipment'>
+                            <button>Proceed Shipping</button>
                         </Link>
                     </Cart>
                 </div>
